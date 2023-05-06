@@ -2,14 +2,18 @@ import * as React from "react";
 import { graphql } from "gatsby";
 
 const Experiment = ({ data, children }) => {
-  console.log(data);
   return (
     <div>
       {/* {data.mdx.frontmatter.description}  */}
-      <iframe
-        src={data.mdx.frontmatter.iframe}
-        className="h-[100vh] w-[100vw]"
-      ></iframe>
+      {data.mdx.frontmatter.iframe ? (
+        <iframe
+          src={data.mdx.frontmatter.iframe}
+          className="h-[100vh] w-[100vw]"
+        ></iframe>
+      ) : (
+        ""
+      )}
+      <div className="prose ">{children}</div>
     </div>
   );
 };

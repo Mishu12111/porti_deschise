@@ -8,7 +8,6 @@ const IndexPage = () => {
     <div>
       <Header />
       <PostGrid />
-      <Link to="/test">test</Link>
     </div>
   );
 };
