@@ -1,4 +1,5 @@
 import { Link, graphql, useStaticQuery } from "gatsby";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as React from "react";
 
 const PostGrid = () => {
@@ -11,25 +12,28 @@ const PostGrid = () => {
             slug
             description
             elevi
+            img {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
         }
       }
     }
   `);
+
   const exps = data.allMdx.nodes;
 
   return (
     <div className="bg-slate-100 flex justify-around flex-wrap p-4 ">
       {exps.map((exp) => {
+        const image = getImage(exp.frontmatter.img);
         return (
           // the card component
           <div className="h-auto rounded-md overflow-hidden bg-white shadow-lg flex-none p-3 m-2 max-w-[300px]">
-            <img
-              className="rounded-md w-full"
-              src="https://phet.colorado.edu/sims/html/my-solar-system/latest/my-solar-system-420.png"
-              alt="img-blur-shadow"
-              layout="fill"
-            />
+            <GatsbyImage image={image} className="rounded-md w-full" />
+
             <div className="m-2">
               <h3 className="text-2xl font-bold mb-1">
                 {exp.frontmatter.title}

@@ -3,7 +3,12 @@ import { graphql } from "gatsby";
 
 const Experiment = ({ data, children }) => {
   console.log(data);
-  return <div>{data.mdx.frontmatter.description}</div>;
+  return (
+    <div>
+      {/* {data.mdx.frontmatter.description}  */}
+      {children}
+    </div>
+  );
 };
 
 export default Experiment;
