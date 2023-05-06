@@ -6,7 +6,10 @@ const Experiment = ({ data, children }) => {
   return (
     <div>
       {/* {data.mdx.frontmatter.description}  */}
-      {children}
+      <iframe
+        src={data.mdx.frontmatter.iframe}
+        className="h-[100vh] w-[100vw]"
+      ></iframe>
     </div>
   );
 };
@@ -18,7 +21,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
-        description
+        iframe
       }
     }
   }
