@@ -2,12 +2,11 @@ import * as React from "react";
 
 const Header = () => {
   return (
-    <header className="h-[95vh] flex justify-start items-center p-4  ">
-      <div className="backdrop-filter backdrop-blur-md bg-white bg-opacity-10 py-6 px-2 rounded-md text-center sm:text-start sm:px-4 max-w-[640px] shadow-lg">
-        <h1 className="text-5xl">Fizica interactiva</h1>
+    <header className="flex h-[95vh] items-center justify-start p-4  ">
+      <div className="max-w-[640px] rounded-md bg-white bg-opacity-10 px-2 py-6 text-center shadow-lg backdrop-blur-md backdrop-filter sm:px-4 sm:text-start">
+        <h1 className="text-5xl">Fizica interactivă</h1>
         <p className="pl-2 text-xl  ">
-          Descopera experimente si principii din fizica intr o maniera atractiva
-          pentru toate varstele....
+          Descoperă experimente și principii din fizică intr-o manieră atractivă
         </p>
       </div>
     </header>
