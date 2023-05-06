@@ -1,7 +1,6 @@
 import * as React from "react";
 import Header from "../components/Header";
 import PostGrid from "../components/PostGrid";
-import { Link } from "gatsby";
 
 const IndexPage = () => {
   return (
@@ -14,4 +13,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Fizica interactiva</title>;
