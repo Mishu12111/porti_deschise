@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Fizica Interactiva`,
+    title: `Fizica si Informatica`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [

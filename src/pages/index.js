@@ -13,4 +13,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Fizica interactiva</title>;
+export const Head = () => <title>Fizica si Informatica</title>;
